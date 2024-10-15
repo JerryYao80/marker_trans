@@ -16,8 +16,8 @@ configure_logging()
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("filename", help="PDF file to parse")
-    parser.add_argument("output", help="Output base folder path")
+    parser.add_argument("--filename", type=str, default="./material/input/2405.18614v2.pdf", help="PDF file to parse")
+    parser.add_argument("--output", type=str, default="./material/output/", help="Output base folder path")
     parser.add_argument("--max_pages", type=int, default=None, help="Maximum number of pages to parse")
     parser.add_argument("--start_page", type=int, default=None, help="Page to start processing at")
     parser.add_argument("--langs", type=str, help="Optional languages to use for OCR, comma separated", default=None)
